@@ -1,10 +1,10 @@
-organization := $organization$
+organization := "$organization$"
 
-name := $name$
+name := "$name$"
 
-version := $version$
+version := "$version$"
 
-scalaVersion := $scala_version$
+scalaVersion := "$scala_version$"
 
 seq(WebPlugin.webSettings :_*)
 
