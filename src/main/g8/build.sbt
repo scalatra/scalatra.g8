@@ -8,7 +8,7 @@ scalaVersion := "$scala_version$"
 
 seq(WebPlugin.webSettings :_*)
 
-libraryDependencies ++= Seq{
+libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % "2.0.0.M4",
   "org.scalatra" %% "scalatra-scalate" % "2.0.0.M4",
   "org.mortbay.jetty" % "jetty" % "6.1.22" % "jetty",
