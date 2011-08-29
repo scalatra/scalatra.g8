@@ -9,8 +9,8 @@ scalaVersion := "$scala_version$"
 seq(webSettings :_*)
 
 libraryDependencies ++= Seq(
-  "org.scalatra" %% "scalatra" % "2.0.0-SNAPSHOT",
-  "org.scalatra" %% "scalatra-scalate" % "2.0.0-SNAPSHOT",
+  "org.scalatra" %% "scalatra" % "2.0.0.RC1",
+  "org.scalatra" %% "scalatra-scalate" % "2.0.0.RC1",
   "org.mortbay.jetty" % "jetty" % "6.1.22" % "jetty",
   "javax.servlet" % "servlet-api" % "2.5" % "provided"
 )
