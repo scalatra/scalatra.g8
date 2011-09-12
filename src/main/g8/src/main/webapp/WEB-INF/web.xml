@@ -4,15 +4,15 @@
 	xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
-	<filter>
-		<filter-name>scalatra</filter-name>
-		<filter-class>
+	<servlet>
+		<servlet-name>scalatra</servlet-name>
+		<servlet-class>
 			$servlet_name$
-		</filter-class>
-	</filter>
-	
-	<filter-mapping>
-		<filter-name>scalatra</filter-name>
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>scalatra</servlet-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</servlet-mapping>
 </web-app>

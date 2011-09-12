@@ -2,8 +2,8 @@ import org.scalatra._
 import java.net.URL
 import scalate.ScalateSupport
 
-class $servlet_name$ extends ScalatraFilter with ScalateSupport {
-  
+class $servlet_name$ extends ScalatraServlet with ScalateSupport {
+
   get("/") {
     <html>
       <body>
@@ -14,18 +14,10 @@ class $servlet_name$ extends ScalatraFilter with ScalateSupport {
   }
 
   notFound {
-    // If no route matches, then try to render a Scaml template
-    val templateBase = requestPath match {
-      case s if s.endsWith("/") => s + "index"
-      case s => s
-    }
-    val templatePath = "/WEB-INF/scalate/templates/" + templateBase + ".scaml"
-    servletContext.getResource(templatePath) match {
-      case url: URL => 
-        contentType = "text/html"
-        templateEngine.layout(templatePath)
-      case _ => 
-        filterChain.doFilter(request, response)
-    } 
+    // Try to render a ScalateTemplate if no route matched
+    findTemplate(requestPath) map { path =>
+      contentType = "text/html"
+      layoutTemplate(path)
+    } getOrElse resourceNotFound()
   }
 }
