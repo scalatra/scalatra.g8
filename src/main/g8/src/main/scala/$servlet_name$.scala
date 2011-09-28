@@ -18,6 +18,6 @@ class $servlet_name$ extends ScalatraServlet with ScalateSupport {
     findTemplate(requestPath) map { path =>
       contentType = "text/html"
       layoutTemplate(path)
-    } getOrElse resourceNotFound()
+    } orElse serveStaticResource() getOrElse resourceNotFound() 
   }
 }
