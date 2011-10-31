@@ -4,7 +4,7 @@
 
 2. Run Jetty
 
-        jetty-run
+        container:start
 
 3. Go to http://localhost:8080/.
 
