@@ -9,12 +9,12 @@ scalaVersion := "$scala_version$"
 seq(webSettings :_*)
 
 libraryDependencies ++= Seq(
-  "org.scalatra" %% "scalatra" % "2.0.2",
-  "org.scalatra" %% "scalatra-scalate" % "2.0.2",
-  "org.scalatra" %% "scalatra-specs2" % "2.0.2" % "test",
+  "org.scalatra" %% "scalatra" % "2.1.0-SNAPSHOT",
+  "org.scalatra" %% "scalatra-scalate" % "2.1.0-SNAPSHOT",
+  "org.scalatra" %% "scalatra-specs2" % "2.1.0-SNAPSHOT" % "test",
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "runtime",
-  "org.eclipse.jetty" % "jetty-webapp" % "7.4.5.v20110725" % "container",
-  "javax.servlet" % "servlet-api" % "2.5" % "provided"
+  "org.eclipse.jetty" % "jetty-webapp" % "8.1.0.RC1" % "container",
+  "javax.servlet" % "javax.servlet-api" % "3.0.1" % "provided"
 )
 
 resolvers += "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
