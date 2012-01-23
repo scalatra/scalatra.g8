@@ -1,5 +1,4 @@
 import org.scalatra._
-import java.net.URL
 import scalate.ScalateSupport
 
 class $servlet_name$ extends ScalatraServlet with ScalateSupport {
