@@ -1,3 +1,5 @@
+package $package$
+
 import org.scalatra._
 import scalate.ScalateSupport
 
