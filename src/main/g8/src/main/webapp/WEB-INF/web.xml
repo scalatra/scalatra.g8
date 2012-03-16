@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE web-app
-PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
-"http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-      version="3.0">
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>scalatra</servlet-name>
+		<servlet-class>
+			$package$.$servlet_name$
+		</servlet-class>
+	</servlet>
 
-  <!-- 
-    This listener loads a class in the default package called Scalatra.
-    That class should should implement org.scalatra.LifeCycle.  Your app
-    can be configured in Scala code there.
-  -->
-  <listener>
-    <listener-class>org.scalatra.servlet.ScalatraListener</listener-class>
-  </listener>
+	<servlet-mapping>
+		<servlet-name>scalatra</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Static Asset Serving Example -->
+	<!--
+	<servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/img/*</url-pattern>
+        <url-pattern>/css/*</url-pattern>
+        <url-pattern>/js/*</url-pattern>
+    </servlet-mapping>
+	-->
 </web-app>
