@@ -18,3 +18,7 @@ libraryDependencies ++= Seq(
 )
 
 resolvers += "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
+
+ivyXML := <dependencies>
+      <exclude org="org.eclipse.jetty.orbit" />
+    </dependencies>
