@@ -1,4 +1,4 @@
-1. Launch [SBT](http://code.google.com/p/simple-build-tool).
+1. Launch [SBT](http://www.scala-sbt.org/).
 
 ```
 ./sbt
