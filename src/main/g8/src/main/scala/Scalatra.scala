@@ -12,8 +12,5 @@ class Scalatra extends LifeCycle {
 
     // Mount one or more servlets
     context.mount(new $servlet_name$, "/*")
-
-    // Set up init params
-    // org.scalatra.cors.allowedOrigins = "http://example.com"
   }
 }
