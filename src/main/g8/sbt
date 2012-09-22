@@ -33,7 +33,7 @@ update_build_props_sbt () {
   if [[ \$ver == \$old ]]; then
     return
   elif [[ -f project/build.properties ]]; then
-    perl -pi -e "s/^sbt\.version=.*\\$/sbt.version=\${ver}/" project/build.properties
+    perl -pi -e "s/^sbt\.version=.*\\\$/sbt.version=\${ver}/" project/build.properties
     grep -q '^sbt.version=' project/build.properties || echo "sbt.version=\${ver}" >> project/build.properties
 
     echo !!!
