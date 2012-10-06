@@ -5,7 +5,7 @@
 1. Launch [SBT](http://www.scala-sbt.org/).
 
 ```sh
-$ ./sbt
+\$ ./sbt
 ```
 
 2. Run Jetty
