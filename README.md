@@ -4,13 +4,14 @@
 
 ## Use this template ##
 
-- [Install giter8 (g8)](https://raw.github.com/ymasory/scalatra-sbt.g8/master/src/main/g8/sbt)
+- [Install sbt](https://github.com/harrah/xsbt/wiki/Getting-Started-Setup), only version [v0.12.0](http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.12.0/sbt-launch.jar).
+- [Install giter8 (g8)](https://raw.github.com/ymasory/scalatra-sbt.g8/master/src/main/g8/sbt).
 - Get the g8 template and run it:
 
 ```sh
 $ g8 scalatra/scalatra-sbt
 $ cd <name-of-app>
-$ ./sbt
+$ sbt
 > container:start
 ```
 
@@ -30,10 +31,12 @@ $ git clone git@github.com:foo/scalatra-sbt.g8.git
 - Do a local deploy of your modified template and try it out.
 
 ```sh
-$ ./sbt
-> ????
+$ sbt
+> g8-test # must result in SUCCESS
 > exit
-$ ???
+$ cd target/sbt-test/default-*/scripted
+$ sbt
+$ container:start
 ```
 
 - If you like your new template, push it to GitHub.
