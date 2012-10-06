@@ -1,16 +1,20 @@
+# $name$ #
+
+## Build & Run ##
+
 1. Launch [SBT](http://www.scala-sbt.org/).
 
-```
-./sbt
+```sh
+$ ./sbt
 ```
 
 2. Run Jetty
 
 ```
-container:start
+> container:start
 ```
 
-3. Go to http://localhost:8080/.
+3. Open http://localhost:8080/ in your browser.
 
 4. Learn more at http://www.scalatra.org/stable/book.
 
