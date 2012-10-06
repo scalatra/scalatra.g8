@@ -1,10 +1,6 @@
-*~
-lib_managed/
-project/boot/
-project/build/target/
-project/plugins/project/build.properties
-src_managed/
+/.lib/
 target/
+*~
 *.eml
 *.iml
 *.ipr
