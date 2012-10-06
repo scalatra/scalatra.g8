@@ -1,13 +1,3 @@
-/.lib/
-target/
-
-*~
-
-*.eml
-*.iml
-*.ipr
-*.iws
-.*.sw?
-
-.idea
 .DS_Store
+target/
+/.lib/
