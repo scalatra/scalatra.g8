@@ -42,7 +42,7 @@ $ container:start
 - If you like your new template, push it to GitHub.
 
 ```sh
-$ cd /path/to/scalatra-sbt.git.git
+$ cd /path/to/scalatra-sbt.g8.git
 $ git push
 ```
 
