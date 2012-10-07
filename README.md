@@ -4,14 +4,13 @@
 
 ## Use this template ##
 
-- [Install sbt](https://github.com/harrah/xsbt/wiki/Getting-Started-Setup), only version [v0.12.0](http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.12.0/sbt-launch.jar).
 - [Install giter8 (g8)](https://raw.github.com/ymasory/scalatra-sbt.g8/master/src/main/g8/sbt).
 - Get the g8 template and run it:
 
 ```sh
 $ g8 scalatra/scalatra-sbt
 $ cd <name-of-app>
-$ sbt
+$ ./sbt
 > container:start
 ```
 
@@ -19,6 +18,7 @@ $ sbt
 
 ## Modify this template ##
 
+- [Install sbt](https://github.com/harrah/xsbt/wiki/Getting-Started-Setup), version 0.12.0 or higher.
 - Fork [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8) on GitHub to your account.
 Let's assume your account is "foo".
 - Clone it.
