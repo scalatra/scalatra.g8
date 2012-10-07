@@ -1,17 +1,11 @@
-1. Launch [SBT](http://www.scala-sbt.org/).
+# $name$ #
 
-```
-./sbt
-```
+## Build & Run ##
 
-2. Run Jetty
-
-```
-container:start
+```sh
+\$ cd \$name__snake\$
+\$ ./sbt
+> container:start
 ```
 
-3. Go to http://localhost:8080/.
-
-4. Learn more at http://www.scalatra.org/stable/book.
-
-5. Happy hacking!
+Now open the site's [root page](http://localhost:8080/) in your browser.
