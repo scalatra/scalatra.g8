@@ -4,7 +4,7 @@ name := "$name$"
 
 version := "$version$"
 
-scalaVersion := "$scala_version$"
+scalaVersion := "2.9.1"
 
 seq(webSettings :_*)
 
