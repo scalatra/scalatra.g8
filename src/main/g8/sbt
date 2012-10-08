@@ -304,9 +304,17 @@ addResolver () {
 addDebugger () {
   addJava "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=\$1"
 }
+
+jrebelAgent () {
+    if [ -z "\$SCALATRA_JREBEL" ];
+        then echo -n '';
+        else echo -n "-javaagent:\$SCALATRA_JREBEL";
+    fi
+}
+
 get_jvm_opts () {
-  # echo "\${JAVA_OPTS:-\$default_jvm_opts}"
-  # echo "\${SBT_OPTS:-\$default_sbt_opts}"
+  echo "\${JAVA_OPTS:-\$default_jvm_opts}"
+  echo "`jrebelAgent` \${SBT_OPTS:-\$default_sbt_opts}"
 
   [[ -f "\$jvm_opts_file" ]] && cat "\$jvm_opts_file"
 }
@@ -430,6 +438,17 @@ EOM
 
 # since sbt 0.7 doesn't understand iflast
 (( \${#residual_args[@]} == 0 )) && residual_args=( "shell" )
+
+if [ ! -z "\$SCALATRA_JREBEL" ]; then
+    if [ ! -r "\$SCALATRA_JREBEL" ]; then
+        echo "################################################################################"
+        echo "                             SCALATRA WARNING"
+        echo "Cannot find and/or read $SCALATRA_JREBEL."
+        echo "Update \\$SCALATRA_JREBEL to a new JRebel jar path, or unset the variable".
+        echo "################################################################################"
+        exit 1
+    fi
+fi
 
 # run sbt
 execRunner "\$java_cmd" \
