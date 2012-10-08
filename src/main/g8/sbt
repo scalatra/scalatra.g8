@@ -443,8 +443,8 @@ if [ ! -z "\$SCALATRA_JREBEL" ]; then
     if [ ! -r "\$SCALATRA_JREBEL" ]; then
         echo "################################################################################"
         echo "                             SCALATRA WARNING"
-        echo "Cannot find and/or read $SCALATRA_JREBEL."
-        echo "Update \\$SCALATRA_JREBEL to a new JRebel jar path, or unset the variable".
+        echo "Cannot find and/or read \$SCALATRA_JREBEL."
+        echo 'Update \$SCALATRA_JREBEL to a new JRebel jar path, or unset the variable.'
         echo "################################################################################"
         exit 1
     fi
