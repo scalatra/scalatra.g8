@@ -1,17 +1,12 @@
-1. Launch [SBT](http://code.google.com/p/simple-build-tool).
+# $name$ #
 
+## Build & Run ##
+
+```sh
+\$ cd \$name__snake\$
+\$ ./sbt
+> container:start
+> browse
 ```
-./sbt
-```
 
-2. Run Jetty
-
-```
-container:start
-```
-
-3. Go to http://localhost:8080/.
-
-4. Learn more at http://www.scalatra.org/stable/book.
-
-5. Happy hacking!
+If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
