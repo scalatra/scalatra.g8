@@ -1,4 +1,12 @@
 *~
 .DS_Store
+
+*.eml
+*.iml
+*.ipr
+*.iws
+.*.sw?
+.idea
+
 target/
 /.lib/
