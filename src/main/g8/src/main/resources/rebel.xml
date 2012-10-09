@@ -5,12 +5,12 @@
     xmlns="http://www.zeroturnaround.com"
     >
   <classpath>
-    <dir name="../../../target/scala-$scala_version$/classes" />
-    <dir name="../../../target/scala-$scala_version$/test-classes"></dir>
+    <dir name="\${scalatra_project_root}/target/scala-$scala_version$/classes" />
+    <dir name="\${scalatra_project_root}/target/scala-$scala_version$/test-classes"></dir>
   </classpath>
   <web>
     <link>
-      <dir name="../../../src/main/webapp" />
+      <dir name="\${scalatra_project_root}/src/main/webapp" />
     </link>
   </web>
 </application>

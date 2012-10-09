@@ -306,9 +306,10 @@ addDebugger () {
 }
 
 jrebelAgent () {
+    SCALATRA_PROJECT_ROOT="\$( cd "\$( dirname "\${BASH_SOURCE[0]}" )" && pwd )"
     if [ -z "\$SCALATRA_JREBEL" ];
         then echo -n '';
-        else echo -n "-javaagent:\$SCALATRA_JREBEL";
+        else echo -n "-javaagent:\$SCALATRA_JREBEL -Dscalatra_project_root=\${SCALATRA_PROJECT_ROOT}";
     fi
 }
 

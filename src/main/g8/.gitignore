@@ -49,8 +49,6 @@ pubsub/target
 # eclipse specific
 .metadata
 jrebel.lic
-
-# eclipse
 .settings
 .classpath
 .project
