@@ -1,11 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<application xsi:schemaLocation="http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com">
+<application
+    xsi:schemaLocation="http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.zeroturnaround.com"
+    >
   <classpath>
-    <dir name="../../../target/scala-2.9.2/classes"></dir><dir name="../../../target/scala-2.9.2/test-classes"></dir>
+    <dir name="../../../target/scala-$scala_version$/classes" />
+    <dir name="../../../target/scala-$scala_version$/test-classes"></dir>
   </classpath>
   <web>
     <link>
-      <dir name="../../../src/main/webapp"></dir>
+      <dir name="../../../src/main/webapp" />
     </link>
   </web>
 </application>
