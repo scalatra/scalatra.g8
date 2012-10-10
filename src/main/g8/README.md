@@ -37,3 +37,18 @@ If `browse` doesn't launch your browser, manually open [http://localhost:8080/](
 \$ heroku create --stack cedar
 \$ git push heroku master
 ```
+
+- After a couple minutes of streaming output, the last few lines will look like this:
+
+```
+-----> Discovering process types
+       Procfile declares types -> web
+-----> Compiled slug size: 43.4MB
+-----> Launching... done, v5
+       http://polar-atoll-9149.herokuapp.com deployed to Heroku
+
+To git@heroku.com:polar-atoll-9149.git
+* [new branch]      master -> master
+```
+
+Open your browser to to the URL provided right before `deployed to Heroku` in the output.
