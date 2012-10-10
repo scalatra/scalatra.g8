@@ -15,6 +15,7 @@ $ ./sbt
 ```
 
 - Open [http://localhost:8080/](http://localhost:8080/) in your browser.
+- Read the `README.md` file in the generated project for more instructions, like deployment to Heroku.
 
 ## Modify this template ##
 
