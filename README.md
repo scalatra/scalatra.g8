@@ -4,7 +4,7 @@
 
 ## Use this template ##
 
-- [Install giter8 (g8)](https://raw.github.com/ymasory/scalatra-sbt.g8/master/src/main/g8/sbt).
+- [Install giter8 (g8)](https://github.com/n8han/giter8#installation).
 - Get the g8 template and run it:
 
 ```sh
