@@ -3,7 +3,7 @@
 ## Build & Run ##
 
 ```sh
-\$ cd $name__snake$
+\$ cd $name;format="snake"$
 \$ ./sbt
 > container:start
 > browse
