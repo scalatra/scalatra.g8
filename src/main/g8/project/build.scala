@@ -6,7 +6,7 @@ object $name;format="Camel"$Build extends Build {
   val Name = "$name$"
   val Version = "$version$"
   val ScalaVersion = "$scala_version$"
-  val ScalatraVersion = "2.2.0.RC3"
+  val ScalatraVersion = "2.2.0-RC3"
 
   import java.net.URL
   import com.github.siasia.PluginKeys.port
