@@ -1,5 +1,7 @@
 import sbt._
 import Keys._
+import org.scalatra.sbt._
+import org.scalatra.sbt.PluginKeys._
 
 object $name;format="Camel"$Build extends Build {
   val Organization = "$organization$"
@@ -8,14 +10,10 @@ object $name;format="Camel"$Build extends Build {
   val ScalaVersion = "$scala_version$"
   val ScalatraVersion = "$scalatra_version$"
 
-  import java.net.URL
-  import com.github.siasia.PluginKeys.port
-  import com.github.siasia.WebPlugin.{container, webSettings}
-
   lazy val project = Project (
     "$name;format="norm"$",
     file("."),
-    settings = Defaults.defaultSettings ++ webSettings ++ Seq(
+    settings = Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ Seq(
       organization := Organization,
       name := Name,
       version := Version,
@@ -32,20 +30,4 @@ object $name;format="Camel"$Build extends Build {
       browseTask
     )
   )
-
-
-  val browse = TaskKey[Unit]("browse", "open web browser to localhost on container:port")
-  val browseTask = browse <<= (streams, port in container.Configuration) map { (streams, port) =>
-    import streams.log
-    val url = new URL("http://localhost:%s" format port)
-    try {
-      log info "Launching browser."
-      java.awt.Desktop.getDesktop.browse(url.toURI)
-    }
-    catch {
-      case _ => {
-        log info { "Could not open browser, sorry. Open manually to %s." format url.toExternalForm }
-      }
-    }
-  }
 }

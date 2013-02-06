@@ -4,6 +4,10 @@ import javax.servlet.ServletContext
 
 class ScalatraBootstrap extends LifeCycle {
   override def init(context: ServletContext) {
-    context.mount(new $servlet_name$, "/*")
+    try {
+      context.mount(new $servlet_name$, "/*")
+    } catch {
+      case t: Throwable => t.printStacktrace()
+    }
   }
 }
