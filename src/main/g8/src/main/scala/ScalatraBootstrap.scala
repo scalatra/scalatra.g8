@@ -7,7 +7,7 @@ class ScalatraBootstrap extends LifeCycle {
     try {
       context.mount(new $servlet_name$, "/*")
     } catch {
-      case t: Throwable => t.printStacktrace()
+      case t: Throwable => t.printStackTrace()
     }
   }
 }
