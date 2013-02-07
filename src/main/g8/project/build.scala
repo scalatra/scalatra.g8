@@ -2,6 +2,8 @@ import sbt._
 import Keys._
 import org.scalatra.sbt._
 import org.scalatra.sbt.PluginKeys._
+import com.mojolly.scalate.ScalatePlugin._
+import ScalateKeys._
 
 object $name;format="Camel"$Build extends Build {
   val Organization = "$organization$"
@@ -13,7 +15,7 @@ object $name;format="Camel"$Build extends Build {
   lazy val project = Project (
     "$name;format="norm"$",
     file("."),
-    settings = Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ Seq(
+    settings = Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
       organization := Organization,
       name := Name,
       version := Version,
@@ -26,7 +28,17 @@ object $name;format="Camel"$Build extends Build {
         "ch.qos.logback" % "logback-classic" % "1.0.6" % "runtime",
         "org.eclipse.jetty" % "jetty-webapp" % "8.1.8.v20121106" % "container",
         "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar"))
-      )
+      ),
+      scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
+        Seq(
+          TemplateConfig(
+            base / "webapp" / "WEB-INF" / "templates",
+            Seq.empty,  /* default imports should be added here */
+            Seq.empty,  /* add extra bindings here */
+            Some("templates")
+          )
+        )
+      }
     )
   )
 }
