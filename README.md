@@ -1,10 +1,13 @@
 # Scalatra sbt project #
 
+[![Build Status](https://secure.travis-ci.org/scalatra/scalatra-sbt.g8.png)](http://travis-ci.org/scalatra/scalatra-sbt.g8)
+
+
 [g8](http://github.com/n8han/giter8) template to get a Scalatra web service up and running quickly.
 
 ## Use this template ##
 
-- [Install giter8 (g8)](https://raw.github.com/ymasory/scalatra-sbt.g8/master/src/main/g8/sbt).
+- [Install giter8 (g8)](https://github.com/n8han/giter8)
 - Get the g8 template and run it:
 
 ```sh
@@ -18,7 +21,7 @@ $ ./sbt
 
 ## Modify this template ##
 
-- [Install sbt](https://github.com/harrah/xsbt/wiki/Getting-Started-Setup), version 0.12.0 or higher.
+- [Install sbt](http://www.scala-sbt.org/), version 0.13.0 or higher.
 - Fork [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8) on GitHub to your account.
 Let's assume your account is "foo".
 - Clone it.
@@ -32,7 +35,7 @@ $ git clone git@github.com:foo/scalatra-sbt.g8.git
 
 ```sh
 $ sbt
-> g8-test # must result in SUCCESS or OutOfMemoryError (working on it)
+> g8Test # must result in SUCCESS
 > exit
 $ cd target/sbt-test/default-*/scripted
 $ sbt
