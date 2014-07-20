@@ -15,7 +15,7 @@ object $name;format="Camel"$Build extends Build {
   lazy val project = Project (
     "$name;format="norm"$",
     file("."),
-    settings = Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
+    settings = ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
       organization := Organization,
       name := Name,
       version := Version,
