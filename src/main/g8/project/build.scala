@@ -15,7 +15,7 @@ object $name;format="Camel"$Build extends Build {
   lazy val project = Project (
     "$name;format="norm"$",
     file("."),
-    settings = Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
+    settings = ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
       organization := Organization,
       name := Name,
       version := Version,
@@ -25,9 +25,10 @@ object $name;format="Camel"$Build extends Build {
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
         "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
-        "ch.qos.logback" % "logback-classic" % "1.0.6" % "runtime",
-        "org.eclipse.jetty" % "jetty-webapp" % "8.1.8.v20121106" % "container",
-        "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar"))
+        "ch.qos.logback" % "logback-classic" % "1.1.2" % "runtime",
+        "org.eclipse.jetty" % "jetty-webapp" % "9.1.5.v20140505" % "container",
+        "org.eclipse.jetty" % "jetty-plus" % "9.1.5.v20140505" % "container",
+        "javax.servlet" % "javax.servlet-api" % "3.1.0"
       ),
       scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
         Seq(
