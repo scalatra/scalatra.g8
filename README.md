@@ -7,7 +7,7 @@
 
 ## Use this template ##
 
-- [Install giter8 (g8)](https://github.com/n8han/giter8) 0.6.8 or higher required
+- [Install giter8 (g8)](https://github.com/n8han/giter8) (NOTICE: 0.6.8 or higher required)
 - Get the g8 template and run it:
 
 ```sh
