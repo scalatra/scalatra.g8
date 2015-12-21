@@ -14,7 +14,7 @@
 $ g8 scalatra/scalatra-sbt
 $ cd <name-of-app>
 $ ./sbt
-> container:start
+> jetty:start
 ```
 
 - Open [http://localhost:8080/](http://localhost:8080/) in your browser.
@@ -39,7 +39,7 @@ $ sbt
 > exit
 $ cd target/sbt-test/default-*/scripted
 $ sbt
-$ container:start
+$ jetty:start
 $ browse # starts browser for you, or manually open http://localhost:8080 to verify
 ```
 
