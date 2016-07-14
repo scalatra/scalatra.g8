@@ -5,7 +5,7 @@
 ```sh
 \$ cd $name;format="snake"$
 \$ ./sbt
-> container:start
+> jetty:start
 > browse
 ```
 
