@@ -56,30 +56,31 @@ object $name;format="Camel"$Build extends Build {
 
   lazy val webApp = Project (
     "$name;format="norm"$",
-  file("."),
-  settings = ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
-    libraryDependencies ++= Seq(
-      "org.scalatra" %% "scalatra" % ScalatraVersion,
-      "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
-      "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
-      "ch.qos.logback" % "logback-classic" % "1.1.5" % "runtime",
-      "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container",
-      "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
-    ),
-    scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
-      Seq(
-        TemplateConfig(
-          base / "webapp" / "WEB-INF" / "templates",
-          Seq.empty,  /* default imports should be added here */
+    file("."),
+    settings = ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
+      libraryDependencies ++= Seq(
+        "org.scalatra" %% "scalatra" % ScalatraVersion,
+        "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
+        "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
+        "ch.qos.logback" % "logback-classic" % "1.1.5" % "runtime",
+        "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container",
+        "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
+      ),
+      scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
           Seq(
-            Binding("context", "_root_.org.scalatra.scalate.ScalatraRenderContext", importMembers = true, isImplicit = true)
-          ),  /* add extra bindings here */
-          Some("templates")
-        )
+            TemplateConfig(
+              base / "webapp" / "WEB-INF" / "templates",
+              Seq.empty,  /* default imports should be added here */
+              Seq(
+                Binding("context", "_root_.org.scalatra.scalate.ScalatraRenderContext", importMembers = true, isImplicit = true)
+              ),  /* add extra bindings here */
+              Some("templates")
+            )
+          )
+        }
       )
-    }
-  )
-  )
-  .settings(commonSettings: _*)
+    )
+    .settings(commonSettings: _*)
     .enablePlugins(JettyPlugin)
+    .aggregate(DomainTier, DataTier, Common)
 }
