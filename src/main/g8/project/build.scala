@@ -19,7 +19,6 @@ object $name;format="Camel"$Build extends Build {
 
   lazy val commonSettings = Seq (
     organization := Organization,
-    name := Name,
     version := Version,
     scalaVersion := ScalaVersion,
     resolvers += Classpaths.typesafeReleases,
@@ -30,13 +29,13 @@ object $name;format="Camel"$Build extends Build {
 
   lazy val Common =
     Project(
-      id = "Common",
+      id = "common",
       base = file("common"))
       .settings(commonSettings: _*)
 
   lazy val DataTier =
     Project(
-      id = "DataTier",
+      id = "dataTier",
       base = file("dataTier"))
       .settings(commonSettings: _*)
       .dependsOn(
@@ -46,7 +45,7 @@ object $name;format="Camel"$Build extends Build {
 
   lazy val DomainTier =
     Project(
-      id = "DomainTier",
+      id = "domainTier",
       base = file("domainTier"))
       .settings(commonSettings: _*)
       .dependsOn(
@@ -58,6 +57,7 @@ object $name;format="Camel"$Build extends Build {
     "$name;format="norm"$",
     file("."),
     settings = ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
+      name := Name,
       libraryDependencies ++= Seq(
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
