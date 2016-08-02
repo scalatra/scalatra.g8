@@ -31,13 +31,13 @@ object $name;format="Camel"$Build extends Build {
   lazy val Common =
     Project(
       id = "Common",
-      base = file("Common"))
+      base = file("common"))
       .settings(commonSettings: _*)
 
   lazy val DataTier =
     Project(
       id = "DataTier",
-      base = file("DataTier"))
+      base = file("dataTier"))
       .settings(commonSettings: _*)
       .dependsOn(
         Common
@@ -47,7 +47,7 @@ object $name;format="Camel"$Build extends Build {
   lazy val DomainTier =
     Project(
       id = "DomainTier",
-      base = file("DomainTier"))
+      base = file("domainTier"))
       .settings(commonSettings: _*)
       .dependsOn(
         DataTier,
