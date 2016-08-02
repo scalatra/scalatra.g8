@@ -3,11 +3,18 @@
 [![Build Status](https://secure.travis-ci.org/scalatra/scalatra-sbt.g8.png)](http://travis-ci.org/scalatra/scalatra-sbt.g8)
 
 
-[g8](http://github.com/n8han/giter8) template to get a Scalatra web service up and running quickly.
+Use [g8](http://github.com/n8han/giter8) template to get a Scalatra web service up and running quickly.
 
 ## Use this template ##
 
+## Install giter8
 - [Install giter8 (g8)](https://github.com/n8han/giter8) (NOTICE: 0.6.8 or higher required)
+- Giter8 is also installable with the OS X package manager [Homebrew][]:
+
+    $ brew update && brew install giter8
+
+[Homebrew]: http://mxcl.github.com/homebrew/
+## Use giter8 to create new project
 - Get the g8 template and run it:
 
 ```sh
