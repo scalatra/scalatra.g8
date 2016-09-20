@@ -3,11 +3,11 @@
 [![Build Status](https://secure.travis-ci.org/scalatra/scalatra-sbt.g8.png)](http://travis-ci.org/scalatra/scalatra-sbt.g8)
 
 
-[g8](http://github.com/n8han/giter8) template to get a Scalatra web service up and running quickly.
+[g8](httphttps://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
 
 ## Use this template ##
 
-- [Install giter8 (g8)](https://github.com/n8han/giter8) (NOTICE: 0.6.8 or higher required)
+- [Install giter8 (g8)](https://github.com/foundweekends/giter8) (NOTICE: 0.6.8 or higher required)
 - Get the g8 template and run it:
 
 ```sh
