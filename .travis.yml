@@ -7,4 +7,4 @@ scala:
   - 2.11.8
 
 script:
-  - sbt ";set G8Keys.properties in G8Keys.g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; g8Test"
+  - sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; g8Test"
