@@ -7,14 +7,12 @@ Use [g8](http://github.com/n8han/giter8) template to get a Scalatra web service 
 
 ## Use this template ##
 
-## Install giter8
-- [Install giter8 (g8)](https://github.com/n8han/giter8) (NOTICE: 0.6.8 or higher required)
-- Giter8 is also installable with the OS X package manager [Homebrew][]:
+[g8](httphttps://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
 
-    $ brew update && brew install giter8
+## Use this template ##
 
-[Homebrew]: http://mxcl.github.com/homebrew/
-## Use giter8 to create new project
+- [Install giter8 (g8)](https://github.com/foundweekends/giter8) (NOTICE: 0.6.8 or higher required)
+
 - Get the g8 template and run it:
 
 ```sh

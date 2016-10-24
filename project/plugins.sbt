@@ -1,3 +1,3 @@
-addSbtPlugin("net.databinder.giter8" %% "giter8-plugin" % "0.6.8")
+addSbtPlugin("org.foundweekends.giter8" % "sbt-giter8" % "0.7.1")
 
 scalacOptions += "-deprecation"
