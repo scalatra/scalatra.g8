@@ -3,7 +3,7 @@ import org.scalatra._
 import javax.servlet.ServletContext
 
 import org.scalatra.metrics.MetricsBootstrap
-implicit import org.scalatra.metrics.MetricsSupportExtensions._
+import org.scalatra.metrics.MetricsSupportExtensions._
 
 class ScalatraBootstrap extends LifeCycle with MetricsBootstrap {
 
