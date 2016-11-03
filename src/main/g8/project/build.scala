@@ -64,7 +64,7 @@ object $name;format="Camel"$Build extends Build {
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
         "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
-        "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container",
+        "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container;compile",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided;compile",
         "org.scalatra" % "scalatra-metrics_2.11" % "2.4.1",
         "io.dropwizard.metrics" % "metrics-core" % ScalaMetricsVersion,
