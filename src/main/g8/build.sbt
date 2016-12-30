@@ -1,13 +1,12 @@
 import org.scalatra.sbt._
 import org.scalatra.sbt.PluginKeys._
 import ScalateKeys._
-import ScalateKeys._
 
 val ScalatraVersion = "$scalatra_version$"
 
 ScalatraPlugin.scalatraSettings
 
-seq(scalateSettings:_*)
+scalateSettings
 
 organization := "$organization$"
 
