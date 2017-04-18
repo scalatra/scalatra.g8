@@ -16,7 +16,8 @@ object $name;format="Camel"$Build extends Build {
 
   lazy val commonDeps = Seq(
     "commons-lang" % "commons-lang" % "2.6",
-    "ch.qos.logback" % "logback-classic" % "1.1.7" % "runtime"
+    "ch.qos.logback" % "logback-classic" % "1.1.7",
+    "org.apache.commons" % "commons-lang3" % "3.0.1"
   )
 
   lazy val commonSettings = Seq (
@@ -64,7 +65,6 @@ object $name;format="Camel"$Build extends Build {
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
         "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
-        "org.eclipse.jetty" % "jetty-webapp" % "9.2.15.v20160210" % "container;compile",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided;compile",
         "org.scalatra" % "scalatra-metrics_2.11" % "2.4.1",
         "io.dropwizard.metrics" % "metrics-core" % ScalaMetricsVersion,

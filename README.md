@@ -5,6 +5,19 @@
 
 Use [g8](http://github.com/n8han/giter8) template to get a Scalatra web service up and running quickly.
 
+## About this template ##
+
+This template is forked from :  [scalatra/scalatra.g8](https://github.com/scalatra/scalatra-sbt.g8). If you would like to refer to original project, please check that link as well.
+
+## What was changed ##
+
+1. After forked, I added sub projects (domainTier, dataTier, common) three layers.
+
+The purpose of layering is to separate the presentation layer out of the project.
+We should have better domain/data layer to avoid cross reference in project as well.
+
+2. Use jetty for sandbox testing. In Jetty, configure it to run in debug mode, listen on port 5005.
+
 ## Use this template ##
 
 [g8](httphttps://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
@@ -27,7 +40,7 @@ $ ./sbt
 ## Modify this template ##
 
 - [Install sbt](http://www.scala-sbt.org/), version 0.13.0 or higher.
-- Fork [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8) on GitHub to your account.
+- Fork [RHome/scalatra-sbt.g8](https://github.com/RHome/scalatra-sbt.g8) on GitHub to your account.
 Let's assume your account is "foo".
 - Clone it.
 
@@ -42,7 +55,7 @@ $ git clone git@github.com:foo/scalatra-sbt.g8.git
 $ sbt
 > g8Test # must result in SUCCESS
 > exit
-$ cd target/sbt-test/default-*/scripted
+$ cd target/sbt-test/rhome-g8/scripted
 $ sbt
 $ jetty:start
 $ browse # starts browser for you, or manually open http://localhost:8080 to verify
