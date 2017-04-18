@@ -7,7 +7,7 @@ Use [g8](http://github.com/n8han/giter8) template to get a Scalatra web service 
 
 ## About this template ##
 
-This template is forked from :  [scalatra/scalatra.g8](https://github.com/scalatra/scalatra-sbt.g8). If you would like to refer to original project, please check that link as well.
+This template is forked from :  [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8). If you would like to refer to original project, please check that link as well.
 
 ## What was changed ##
 
