@@ -3,17 +3,17 @@
 [![Build Status](https://secure.travis-ci.org/scalatra/scalatra-sbt.g8.png)](http://travis-ci.org/scalatra/scalatra-sbt.g8)
 
 
-[g8](httphttps://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
+[g8](https://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
 
 ## Use this template ##
 
-- [Install giter8 (g8)](https://github.com/foundweekends/giter8) (NOTICE: 0.6.8 or higher required)
-- Get the g8 template and run it:
+- [Install sbt](http://www.scala-sbt.org/0.13/docs/Setup.html), version 0.13.13 or higher
+- run:
 
 ```sh
-$ g8 scalatra/scalatra-sbt
+$ sbt new scalatra/scalatra-sbt.g8
 $ cd <name-of-app>
-$ ./sbt
+$ sbt
 > jetty:start
 ```
 
@@ -21,7 +21,6 @@ $ ./sbt
 
 ## Modify this template ##
 
-- [Install sbt](http://www.scala-sbt.org/), version 0.13.0 or higher.
 - Fork [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8) on GitHub to your account.
 Let's assume your account is "foo".
 - Clone it.
