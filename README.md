@@ -11,9 +11,9 @@
 - run:
 
 ```sh
-$ ./sbt new scalatra/scalatra-sbt.g8
+$ sbt new scalatra/scalatra-sbt.g8
 $ cd <name-of-app>
-$ ./sbt
+$ sbt
 > jetty:start
 ```
 
