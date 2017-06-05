@@ -36,10 +36,10 @@ $ git clone git@github.com:foo/scalatra-sbt.g8.git
 $ sbt
 > g8Test # must result in SUCCESS
 > exit
-$ cd target/sbt-test/default-*/scripted
+$ cd target/sbt-test/scalatra-sbt-g8/scripted
 $ sbt
-$ jetty:start
-$ browse # starts browser for you, or manually open http://localhost:8080 to verify
+> jetty:start
+> browse # starts browser for you, or manually open http://localhost:8080 to verify
 ```
 
 - If you like your new template, push it to GitHub.
@@ -53,7 +53,7 @@ $ git push
 
 ```sh
 $ cd
-$ g8 foo/scalatra-sbt.g8
+$ sbt new foo/scalatra-sbt.g8
 ```
 
 - If you'd like to share your changes, send a pull request.
