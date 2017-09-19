@@ -19,4 +19,4 @@ libraryDependencies ++= Seq(
 )
 
 enablePlugins(SbtTwirl)
-enablePlugins(JettyPlugin)
+enablePlugins(ScalatraPlugin)
