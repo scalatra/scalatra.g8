@@ -1,17 +1,17 @@
 # Scalatra sbt project #
 
-[![Build Status](https://secure.travis-ci.org/scalatra/scalatra-sbt.g8.png)](http://travis-ci.org/scalatra/scalatra-sbt.g8)
+[![Build Status](https://secure.travis-ci.org/scalatra/scalatra.g8.png)](http://travis-ci.org/scalatra/scalatra.g8)
 
 
 [g8](https://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
 
 ## Use this template ##
 
-- [Install sbt](http://www.scala-sbt.org/0.13/docs/Setup.html), version 0.13.13 or higher
+- [Install sbt](http://www.scala-sbt.org/1.x/docs/Setup.html), version 0.13.13 or higher
 - run:
 
 ```sh
-$ sbt new scalatra/scalatra-sbt.g8
+$ sbt new scalatra/scalatra.g8
 $ cd <name-of-app>
 $ sbt
 > jetty:start
@@ -21,12 +21,12 @@ $ sbt
 
 ## Modify this template ##
 
-- Fork [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8) on GitHub to your account.
+- Fork [scalatra/scalatra.g8](https://github.com/scalatra/scalatra.g8) on GitHub to your account.
 Let's assume your account is "foo".
 - Clone it.
 
 ```sh
-$ git clone git@github.com:foo/scalatra-sbt.g8.git
+$ git clone git@github.com:foo/scalatra.g8.git
 ```
 
 - Now make your desired changes.
@@ -36,7 +36,7 @@ $ git clone git@github.com:foo/scalatra-sbt.g8.git
 $ sbt
 > g8Test # must result in SUCCESS
 > exit
-$ cd target/sbt-test/scalatra-sbt-g8/scripted
+$ cd target/sbt-test/scalatra-g8/scripted
 $ sbt
 > jetty:start
 > browse # starts browser for you, or manually open http://localhost:8080 to verify
@@ -45,7 +45,7 @@ $ sbt
 - If you like your new template, push it to GitHub.
 
 ```sh
-$ cd /path/to/scalatra-sbt.g8.git
+$ cd /path/to/scalatra.g8.git
 $ git push
 ```
 
@@ -53,7 +53,7 @@ $ git push
 
 ```sh
 $ cd
-$ sbt new foo/scalatra-sbt.g8
+$ sbt new foo/scalatra.g8
 ```
 
 - If you'd like to share your changes, send a pull request.
