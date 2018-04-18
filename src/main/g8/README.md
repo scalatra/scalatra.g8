@@ -3,7 +3,7 @@
 ## Build & Run ##
 
 ```sh
-\$ cd $name;format="snake"$
+\$ cd $name;format="norm"$
 \$ sbt
 > jetty:start
 > browse
