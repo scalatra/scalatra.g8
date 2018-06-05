@@ -2,6 +2,11 @@ resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy
 
 scriptedBufferLog := false
 
-scriptedLaunchOpts ++= sys.process.javaVmArguments.filter(
+val javaVmArgs: List[String] = {
+  import scala.collection.JavaConverters._
+  java.lang.management.ManagementFactory.getRuntimeMXBean.getInputArguments.asScala.toList
+}
+
+scriptedLaunchOpts ++= javaVmArgs.filter(
   a => Seq("-Xmx", "-Xms", "-XX", "-Dsbt.log.noformat").exists(a.startsWith)
 )
