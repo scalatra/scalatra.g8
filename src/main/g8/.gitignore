@@ -65,5 +65,10 @@ jrebel.lic
 .*.sw?
 .idea
 
+# metals
+.metals
+.bloop
+project/metals.sbt
+
 # paulp script
 /.lib/
