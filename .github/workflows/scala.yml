@@ -20,4 +20,6 @@ jobs:
       with:
         java-version: ${{ matrix.java }}
     - name: Run tests
-      run: sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; g8Test"
+      env:
+        SCALA_VERSION: ${{ matrix.Scala }}
+      run: sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$SCALA_VERSION\")}; g8Test"
