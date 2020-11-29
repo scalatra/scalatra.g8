@@ -69,3 +69,9 @@ jrebel.lic
 
 # paulp script
 /.lib/
+
+# metals artifacts
+.vscode
+.metals
+.bloop
+**/metals.sbt
