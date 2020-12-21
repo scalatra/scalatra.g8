@@ -1,6 +1,6 @@
 # Scalatra sbt project #
 
-[![Build Status](https://secure.travis-ci.org/scalatra/scalatra.g8.png)](http://travis-ci.org/scalatra/scalatra.g8)
+![Scala CI](https://github.com/scalatra/scalatra.g8/workflows/Scala%20CI/badge.svg)
 
 
 [g8](https://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
