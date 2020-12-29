@@ -1,7 +1,5 @@
 ScriptedPlugin.globalSettings
 
-resolvers += Resolver.url("typesafe", url("https://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
-
 scriptedBufferLog := false
 
 val javaVmArgs: List[String] = {
