@@ -46,6 +46,8 @@ core/target
 pubsub/lib_managed
 pubsub/target
 
+.bsp/
+
 # eclipse specific
 .metadata
 jrebel.lic
@@ -66,9 +68,10 @@ jrebel.lic
 .idea
 
 # metals
-.metals
-.bloop
-project/metals.sbt
+.vscode/
+.metals/
+.bloop/
+metals.sbt
 
 # paulp script
 /.lib/
