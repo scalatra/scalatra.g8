@@ -19,4 +19,4 @@ lazy val hello = (project in file("."))
 enablePlugins(SbtTwirl)
 enablePlugins(JettyPlugin)
 
-containerLibs in Jetty := Seq("org.eclipse.jetty" % "jetty-runner" % "$jetty_version$" intransitive())
+Jetty / containerLibs := Seq("org.eclipse.jetty" % "jetty-runner" % "$jetty_version$" intransitive())
