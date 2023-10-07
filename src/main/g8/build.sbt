@@ -8,13 +8,15 @@ lazy val hello = (project in file("."))
     name := "$name$",
     version := "$version$",
     libraryDependencies ++= Seq(
-      "org.scalatra" %% "scalatra" % ScalatraVersion,
-      "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
-      "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
+      "org.scalatra" %% "scalatra-jakarta" % ScalatraVersion,
+      "org.scalatra" %% "scalatra-scalatest-jakarta" % ScalatraVersion % "test",
+      "ch.qos.logback" % "logback-classic" % "1.4.11" % "runtime",
       "org.eclipse.jetty" % "jetty-webapp" % "$jetty_version$" % "container",
-      "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
+      "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0" % "provided"
     ),
   )
 
 enablePlugins(SbtTwirl)
 enablePlugins(JettyPlugin)
+
+containerLibs in Jetty := Seq("org.eclipse.jetty" % "jetty-runner" % "$jetty_version$" intransitive())
