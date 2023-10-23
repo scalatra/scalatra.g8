@@ -22,4 +22,4 @@ jobs:
     - name: Run tests
       env:
         SCALA_VERSION: ${{ matrix.Scala }}
-      run: sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$SCALA_VERSION\")}; g8Test"
+      run: sbt ";set Test / g8 / g8Properties ~= { _ + (\"scala_version\" -> \"$SCALA_VERSION\")}; g8Test"
