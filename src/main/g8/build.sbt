@@ -10,13 +10,14 @@ lazy val hello = (project in file("."))
     libraryDependencies ++= Seq(
       "org.scalatra" %% "scalatra-jakarta" % ScalatraVersion,
       "org.scalatra" %% "scalatra-scalatest-jakarta" % ScalatraVersion % "test",
-      "ch.qos.logback" % "logback-classic" % "1.4.11" % "runtime",
-      "org.eclipse.jetty" % "jetty-webapp" % "$jetty_version$" % "container",
-      "jakarta.servlet" % "jakarta.servlet-api" % "5.0.0" % "provided"
+      "ch.qos.logback" % "logback-classic" % "1.5.6" % "runtime",
+      "org.eclipse.jetty.ee10" % "jetty-ee10-webapp" % "$jetty_version$" % "container",
+      "jakarta.servlet" % "jakarta.servlet-api" % "6.0.0" % "provided"
     ),
   )
 
 enablePlugins(SbtTwirl)
 enablePlugins(JettyPlugin)
 
-Jetty / containerLibs := Seq("org.eclipse.jetty" % "jetty-runner" % "$jetty_version$" intransitive())
+Jetty / containerLibs := Seq("org.eclipse.jetty.ee10" % "jetty-ee10-runner" % "$jetty_version$" intransitive())
+Jetty / containerMain := "org.eclipse.jetty.ee10.runner.Runner"
