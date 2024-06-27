@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [11, 17]
+        java: [17, 21]
         Scala: ['2.12.19', '2.13.14', '3.3.3']
     steps:
     - uses: actions/checkout@v4
