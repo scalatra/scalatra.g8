@@ -14,7 +14,7 @@
 $ sbt new scalatra/scalatra.g8
 $ cd <name-of-app>
 $ sbt
-> Jetty/start
+> webappStart
 ```
 
 - Open [http://localhost:8080/](http://localhost:8080/) in your browser.
@@ -38,7 +38,7 @@ $ sbt
 > exit
 $ cd target/sbt-test/scalatra-g8/scripted
 $ sbt
-> Jetty/start
+> webappStart
 > browse # starts browser for you, or manually open http://localhost:8080 to verify
 ```
 
