@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [11, 17]
-        Scala: ['2.12.19', '2.13.14', '3.3.3']
+        java: [17, 21]
+        scala: ['2.12.20', '2.13.14', '3.3.3']
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK
@@ -22,5 +22,5 @@ jobs:
         java-version: ${{ matrix.java }}
     - name: Run tests
       env:
-        SCALA_VERSION: ${{ matrix.Scala }}
+        SCALA_VERSION: ${{ matrix.scala }}
       run: sbt ";set Test / g8 / g8Properties ~= { _ + (\"scala_version\" -> \"$SCALA_VERSION\")}; g8Test"
