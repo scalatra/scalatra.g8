@@ -38,8 +38,8 @@ $ sbt
 > exit
 $ cd target/sbt-test/scalatra-g8/scripted
 $ sbt
-> Jetty/start
-> browse # starts browser for you, or manually open http://localhost:8080 to verify
+> warStart
+# manually open http://localhost:8080 to verify
 ```
 
 - If you like your new template, push it to GitHub.
