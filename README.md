@@ -7,14 +7,14 @@
 
 ## Use this template ##
 
-- [Install sbt](http://www.scala-sbt.org/1.x/docs/Setup.html), version 0.13.13 or higher
+- [Install sbt](http://www.scala-sbt.org/1.x/docs/Setup.html), version 1.x or higher
 - run:
 
 ```sh
 $ sbt new scalatra/scalatra.g8
 $ cd <name-of-app>
 $ sbt
-> Jetty/start
+> warStart
 ```
 
 - Open [http://localhost:8080/](http://localhost:8080/) in your browser.
