@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         java: [17, 25]
-        scala: ['2.12.20', '2.13.17', '3.3.7']
+        scala: ['2.12.21', '2.13.18', '3.3.7']
     steps:
     - uses: actions/checkout@v6
     - name: Set up JDK
