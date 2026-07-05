@@ -1,7 +1,6 @@
 # Scalatra sbt project #
 
-![Scala CI](https://github.com/scalatra/scalatra.g8/workflows/Scala%20CI/badge.svg)
-
+[![Scala CI](https://github.com/scalatra/scalatra.g8/actions/workflows/scala.yml/badge.svg?event=push)](https://github.com/scalatra/scalatra.g8/actions/workflows/scala.yml)
 
 [g8](https://github.com/foundweekends/giter8) template to get a Scalatra web service up and running quickly.
 
